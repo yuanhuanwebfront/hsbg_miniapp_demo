@@ -1,3 +1,5 @@
 <view class="page-container">
-  <van-button type='primary' class="add-btn" bindtap="addData">录入数据</van-button>
+  <van-button type='primary' bindtap="addData">vant_demo</van-button>
+  <view style="margin-bottom: 30rpx;"></view>
+  <van-button type='primary' bindtap="addTable">表格demo</van-button>
 </view>

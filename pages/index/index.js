@@ -13,8 +13,15 @@ Page({
 
   addData(){
     wx.navigateTo({
-      url: '/pages/saas/saas'
+      url: '/pages/demo/demo'
     })
-  }
+  },
+
+  addTable(){
+    wx.navigateTo({
+      url: '/pages/table/table'
+    })
+  },
+
   
 })
