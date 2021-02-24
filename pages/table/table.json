@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-divider": "@vant/weapp/divider/index",
+    "table": "/component/table_component/table/table",
+    "action-td": "./component/action_td/action_td",
+    "self-td": "./component/self_td/self_td"
+  }
+}

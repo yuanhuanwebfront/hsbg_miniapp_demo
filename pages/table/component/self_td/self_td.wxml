@@ -1,0 +1,13 @@
+<view class="action-box" catchtap="handleClickItem">
+
+  <block wx:if="{{columns.key === 'switch'}}">
+    <van-switch disabled checked="{{ item.switch }}" />
+  </block>
+  <block wx:if="{{columns.key === 'rate'}}">
+    <van-rate value="{{ item.rate }}" readonly/>
+  </block>
+  <block wx:if="{{columns.key === 'sex'}}">
+    <view class="sex">{{item.sex}}</view>
+  </block>
+
+</view>

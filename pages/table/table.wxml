@@ -1,0 +1,39 @@
+<view>
+
+  <van-divider contentPosition="center">基础表格</van-divider>
+  <table class="basic-table" 
+    columns="{{tableColumns}}" 
+    dataList="{{dataList}}" 
+    getListLoading="{{getListLoading}}" 
+    showTipImage="{{showTipImage}}" 
+  />
+
+  <van-divider contentPosition="center">自定义宽度表格</van-divider>
+  <table class="basic-table" 
+    scrollX="{{true}}"
+    columns="{{tableWidthColumns}}" 
+    dataList="{{dataList}}" 
+    getListLoading="{{getListLoading}}" 
+    showTipImage="{{showTipImage}}" 
+  />
+
+  <van-divider contentPosition="center">自定义操作表格</van-divider>
+  <table class="basic-table" 
+    columns="{{tableActionColumns}}" 
+    dataList="{{dataList}}" 
+    getListLoading="{{getListLoading}}" 
+    showTipImage="{{showTipImage}}" 
+    generic:action-td="action-td"
+    bindclickaction="handleClickAction"
+  />
+
+  <van-divider contentPosition="center">自定义单元格内容</van-divider>
+  <table class="basic-table" 
+    columns="{{tableDesignColumns}}" 
+    dataList="{{dataList}}" 
+    getListLoading="{{getListLoading}}" 
+    showTipImage="{{showTipImage}}" 
+    generic:action-td="self-td"
+  />
+
+</view>

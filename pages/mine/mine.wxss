@@ -1,0 +1,34 @@
+.mine-page{
+  padding-top: 24rpx;
+}
+.head-area{
+  padding: 0 40rpx;
+  height: 200rpx;
+  background-color: #fff;
+}
+.head-area image{
+  border: 1px solid #f6f6f6;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 70rpx;
+}
+.head-area .login-text{
+  padding-left: 40rpx;
+  color: #666;
+}
+
+.fun-area{
+  margin-top: 80rpx;
+}
+.fun-area .block{
+  font-size: 26rpx;
+  padding: 0 30rpx;
+  background-color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-bottom: 16rpx;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACp0lEQVRoQ+2ZS4vUQBSFz61FL9y79A8oDSZzs9dNLxQEhRmEARnFB4iCA74YkJEBUVEEBVHxxaAojAiCqKALXbjsykLQrWv9EbkSKGGU7tyuSlLpgcn2nKp7vrqVpKAIG/yhDZ4fmwBddzC4A9baZQA7Afwmoq9pmj7rAiYIIM/zzyKya33goih2Z1n2JTaEN4Bb+cujgnYBEQLwGsCBcSsdGyIE4CmAhaqtEhPCGyDP8yMi8ljb67EgvAHK4MPhcI2IZjUIY8wgSZJPmq+OHgRQFrTWvgRwUCtujNmbJMl7zReqBwM4iOcA5rXiIrKfmd9ovhC9FoDbTqtEdEgrLiJzzPxK8/nqtQFcJ54AOKwVF5F5Zn6h+Xz0RgBcJx4S0VGtuIgsMPOq5ptUbwzAdeI+gBNacWPMsSRJHmm+SfRGAVwn7hLRSa146UnT9J7m0/TGARzEHSI6rRUXkTPMfFvzVemtALjtdAvAohZORM4x803NN05vDcBB3ABwVgsnIkvMfFXzjdJbBXDb6RoRXdDCicgyM69ovv/11gFcJ64AWNLCFUUxyLLM6+wUBcB1YoWILlVBlKdcZlb/JevniAaQ5/l2AGsisqMC4u3MzMw+rVPRASYMDxG5zswXpwpg0vAAvvV6vUG/3/81NQCThiei7wDm0jT94RO+9Lb2DsQI3xpArPCtAMQM3zhA7PCNAnQRvjGArsI3AtBl+NoAXYevBTAN4YMBpiV8EMBwONxS3sgASKp++3WOBz7HCe+jRNUFx9/CscKHduAdEe0Zt0oxwwcBWGsfADg+CiB2+FCA8namvKX55+kifBBAOchae0pEzhPRNkfxkYgWQ87zPi/syK6HTpDn+daiKGaNMT/TNP0QOk/dcd5foboFmx6/CdD0ivrO9wcEH0ZAsu7u0QAAAABJRU5ErkJggg==);
+  background-repeat: no-repeat;
+  background-position: right 20rpx center;
+  background-size: 30rpx 30rpx;
+}

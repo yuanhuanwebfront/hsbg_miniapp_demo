@@ -1,0 +1,3 @@
+<view class="page-container">
+  <van-button type='primary' class="add-btn" bindtap="addData">录入数据</van-button>
+</view>

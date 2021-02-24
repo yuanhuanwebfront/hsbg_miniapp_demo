@@ -1,0 +1,171 @@
+<view class="page">
+
+  <view class="block">
+    <van-divider contentPosition="center">按钮</van-divider>
+    <van-button class="mr-20 mb-10" type="default">默认按钮</van-button>
+    <van-button class="mr-20 mb-10" type="primary">主要按钮</van-button>
+    <van-button class="mr-20 mb-10" plain type="primary">朴素按钮</van-button>
+    <view class="empty"></view>
+    <van-button class="mr-20 mb-10" disabled type="primary">禁用状态</van-button>
+    <van-button class="mr-20 mb-10" loading type="info" loading-text="加载中..." />
+  </view>
+
+
+   <view class="block">
+    <van-divider contentPosition="center">单元格</van-divider>
+    
+    <van-cell-group style="margin-bottom: 20rpx;">
+      <van-cell title="单元格" value="内容" />
+      <van-cell title="单元格" value="内容" label="描述信息" border="{{ false }}" />
+    </van-cell-group>
+    <view class="empty"></view>
+    <van-cell class="mt-20" title="无分组单元格" value="无边框" size="large" />
+  </view>
+
+  <view class="block">
+    <van-divider contentPosition="center">图标</van-divider>
+    <van-icon class="mr-20" name="close" size="30px" />
+    <van-icon name="chat" color="#07c160" info="99+" size="50px" />
+  </view>
+
+  <view class="block">
+    <van-divider contentPosition="center">日历</van-divider>
+    <van-cell title="日期区间" value="{{ date }}" bind:click="showCalendar" />
+    <van-calendar
+      show="{{ dateShow }}"
+      type="range"
+      bind:close="hideCalendar"
+      bind:confirm="confirmCanlendar"
+    />
+  </view>
+
+  <view class="block">
+    <van-divider contentPosition="center">复选框</van-divider>
+    <van-checkbox-group class="mt-20" value="{{ checkbox }}" bind:change="onCheckboxChange">
+      <van-checkbox shape="square" name="apple">苹果</van-checkbox>
+      <van-checkbox shape="square" name="banana">香蕉</van-checkbox>
+      <van-checkbox shape="square" name="caomei">草莓</van-checkbox>
+    </van-checkbox-group>
+    <view class="mt-20">喜欢的水果: {{checkbox}}</view>
+  </view>
+
+  <view class="block">
+    <van-divider contentPosition="center">日期时间</van-divider>
+    <van-cell title="选择日期时间" value="{{datetimeStr}}" bind:click="showDatetime"></van-cell>
+    <van-popup show="{{ datetimeShow }}" position="bottom" custom-style="height: 40%">
+      <van-datetime-picker bind:cancel="closeDatetime" bind:confirm="confirmDatetime" 
+        type="datetime" value="{{ currentDate }}" bind:input="onInput" />
+    </van-popup>
+  </view>
+
+  <view class="block">
+    <van-divider contentPosition="center">输入框</van-divider>
+    <van-field
+      value="{{ inputValue }}"
+      placeholder="请输入用户名"
+    />
+    <van-field
+      value="输入框已禁用"
+      label="用户名"
+      left-icon="contact"
+      disabled
+      border="{{ false }}"
+    />
+  </view>
+  
+  <view class="block">
+    <van-divider contentPosition="center">Picker</van-divider>
+    <van-picker columns="{{ pickerList }}" bind:change="onPickerChange" />
+  </view>
+
+  <view class="block">
+     <van-divider contentPosition="center">单选框</van-divider>
+      <van-radio-group value="{{ radio }}" bind:change="onRadioChange">
+        <van-radio name="1">单选框 1</van-radio>
+        <van-radio name="2">单选框 2</van-radio>
+      </van-radio-group>
+      <view class="mt-20">选择的值是{{radio}}</view>
+  </view>
+
+  <view class="block">
+    <van-divider contentPosition="center">评分</van-divider>
+    <van-rate value="{{ rateValue }}" bind:change="onRateChange" />
+  </view>
+
+  <view class="block">
+    <van-divider contentPosition="center">滑块</van-divider>
+    <van-slider value="50" bind:change="onSliderChange" />
+  </view>
+
+  <view class="block">
+    <van-divider contentPosition="center">开关</van-divider>
+    <van-switch checked="{{ switchValue }}" bind:change="onSwitchChange" />
+  </view>
+
+  <view class="block">
+    <van-divider contentPosition="center">下拉菜单</van-divider>
+    <van-dropdown-menu>
+      <van-dropdown-item value="{{ dropValue1 }}" options="{{ dropOption1 }}" />
+      <van-dropdown-item value="{{ dropValue2 }}" options="{{ dropOption2 }}" />
+    </van-dropdown-menu>
+  </view>
+
+  <view class="block">
+    <van-divider contentPosition="center">分享面板</van-divider>
+    <van-cell title="显示分享面板" bind:click="showShare" />
+    <van-share-sheet
+      show="{{ shareShow }}"
+      title="立即分享给好友"
+      options="{{ shareOptions }}"
+      bind:close="hideShare"
+    />
+  </view>
+
+  <view class="block">
+    <van-divider contentPosition="center">进度条</van-divider>
+    <van-circle value="{{ progress }}" text="{{progress + '%'}}" />
+    <view class="empty"></view>
+    <van-button type="primary" class="mr-20" bind:click="addProgress">+5</van-button>
+    <van-button type="primary" bind:click="minusProgress">-5</van-button>
+  </view>
+
+  <view class="block">
+    <van-divider contentPosition="center">折叠面板</van-divider>
+
+    <van-collapse value="{{ activeNames }}" bind:change="onCollapseChange">
+      <van-collapse-item title="有赞微商城" name="1">
+        提供多样店铺模板，快速搭建网上商城
+      </van-collapse-item>
+      <van-collapse-item title="有赞零售" name="2">
+        网店吸粉获客、会员分层营销、一机多种收款，告别经营低效和客户流失
+      </van-collapse-item>
+      <van-collapse-item title="有赞美业" name="3" disabled>
+        线上拓客，随时预约，贴心顺手的开单收银
+      </van-collapse-item>
+    </van-collapse>
+  </view>
+
+  <view class="block">
+    <van-divider contentPosition="center">步骤条</van-divider>
+    <van-steps steps="{{ steps }}" active="{{ activeStep }}" />
+    <view class="empty"></view>
+    <van-button type="primary" bind:click="toNextStep">下一步</van-button>
+  </view>
+
+  <view class="block">
+    <van-divider contentPosition="center">标签</van-divider>
+    <van-tag class="mr-20" type="primary">标签</van-tag>
+    <van-tag class="mr-20" plain type="primary">标签</van-tag>
+    <van-tag class="mr-20" round type="primary">标签</van-tag>
+  </view>
+
+  <view class="block">
+    <van-divider contentPosition="center">地址</van-divider>
+    <van-cell title="{{addressStr}}" bind:click="showAddress"></van-cell>
+    <van-popup show="{{ addressStatus }}" position="bottom" custom-style="height: 40%">
+      <van-area area-list="{{ areaList }}" columns-placeholder="{{ ['请选择', '请选择', '请选择'] }}"
+      bind:change="addressChange" bind:confirm="confirmAddress" />
+    </van-popup>
+  </view>
+
+</view>

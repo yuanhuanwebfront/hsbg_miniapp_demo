@@ -1,0 +1,21 @@
+.page{
+  background-color: #f6f6f6;
+}
+
+.block{
+  padding: 30rpx;
+  background-color: #fff;
+  margin-bottom: 40rpx;
+}
+
+.mr-20{
+  margin-right: 20rpx;
+}
+.mt-20{
+  margin-top: 20rpx;
+}
+.empty{
+  height: 20rpx;
+  width: 100%;
+  background-color: #f6f6f6;
+}

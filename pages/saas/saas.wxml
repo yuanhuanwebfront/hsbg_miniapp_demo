@@ -1,0 +1,61 @@
+<view>
+  <view class="form-item">
+    <view class="label">单选框</view>
+    <van-radio-group value="{{ radio }}" bind:change="onChange">
+      <van-radio name="1">单选框 1</van-radio>
+      <van-radio name="2">单选框 2</van-radio>
+    </van-radio-group>
+  </view>
+  <view class="form-item">
+    <view class="label">输入框</view>
+    <van-field label="用户名" value="{{ value }}" placeholder="请输入用户名" />
+  </view>
+  <view class="form-item">
+    <view class="label">评分</view>
+    <van-rate value="{{ rate }}" />
+  </view>
+  <view class="form-item">
+    <view class="label">开关</view>
+    <van-switch bind:change="switchChange" checked="{{ checked }}" />
+  </view>
+  <view class="form-item">
+    <view class="label">复选框</view>
+    <van-checkbox value="{{ checkboxStatus }}" bind:change="checkboxChange">复选框</van-checkbox>
+  </view>
+  <view class="form-item">
+    <view class="label">日历</view>
+    <van-cell title="选择日期" value="{{date}}" bind:click="show"></van-cell>
+    <van-calendar show="{{ showCalendar }}" bind:close="onCloseCalendar" bind:confirm="onConfirmCalendar" />
+  </view>
+  <view class="form-item">
+    <view class="label">日期时间</view>
+    <van-cell title="选择日期" value="{{datetimeStr}}" bind:click="showDatetime"></van-cell>
+    <van-popup show="{{ showDate }}" position="bottom" custom-style="height: 40%">
+      <van-datetime-picker bind:cancel="closeDatetime" bind:confirm="confirmDatetime" type="datetime" value="{{ currentDate }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:input="onInput" />
+    </van-popup>
+  </view>
+
+  <view class="form-item">
+    <view class="label">上拉菜单</view>
+    <van-cell title="显示上拉菜单" bind:click="showSelect"></van-cell>
+    <van-action-sheet
+      show="{{ selectStatus }}"
+      actions="{{ actions }}"
+      cancel-text="取消"
+      bind:close="onCloseSelect"
+      bind:cancel="onCloseSelect"
+      bind:select="onChooseSelect"
+    />
+  </view>
+
+  <view class="form-item">
+    <view class="label">地址</view>
+    <van-cell title="{{addressStr}}" bind:click="showAddress"></van-cell>
+    <van-popup show="{{ addressStatus }}" position="bottom" custom-style="height: 40%">
+      <van-area area-list="{{ areaList }}" columns-placeholder="{{ ['请选择', '请选择', '请选择'] }}"
+      bind:change="addressChange" bind:confirm="confirmAddress" />
+    </van-popup>
+  </view>
+
+
+</view>

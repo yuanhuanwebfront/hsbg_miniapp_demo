@@ -1,0 +1,7 @@
+.form-item{
+  padding: 30rpx;
+  border-bottom: 1px solid #f3f3f3;
+}
+.form-item .label{
+  margin-bottom: 20rpx;
+}

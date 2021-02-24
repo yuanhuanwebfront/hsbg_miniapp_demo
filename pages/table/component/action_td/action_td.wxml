@@ -1,0 +1,19 @@
+<view class="action-box" catchtap="handleClickItem">
+
+  <block wx:if="{{columns.key === 'name'}}">
+    <view class="name">{{item.name}}</view>
+  </block>
+  <block wx:if="{{columns.key === 'age'}}">
+    <view class="age">{{item.age}}</view>
+  </block>
+  <block wx:if="{{columns.key === 'sex'}}">
+    <view class="sex">{{item.sex}}</view>
+  </block>
+  <block wx:if="{{columns.key === 'action'}}">
+    <!-- 启动编辑 禁用时显示启用按钮 -->
+    <view class="action-btn disable" data-type="delete">删除</view>
+    <!-- 启动编辑 启用时显示禁用按钮 -->
+    <view class="action-btn enable" data-type="edit">编辑</view>
+  </block>
+
+</view>

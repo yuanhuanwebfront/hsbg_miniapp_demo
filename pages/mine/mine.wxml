@@ -1,0 +1,16 @@
+<view class="page-container mine-page">
+  <!-- 头像区域 -->
+  <button class="flex-box head-area" open-type="getUserInfo" bindgetuserinfo="getUser">
+    <image mode="aspectFit" src="{{userImage}}" />
+    <text class="login-text">{{userName}}</text>
+  </button>
+
+  <!-- 功能区域 -->
+  <view class="fun-area">
+    <view class="block">我的代办</view>
+    <view class="block">我的数据</view>
+    <view class="block">设置</view>
+  </view>
+  
+
+</view>

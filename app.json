@@ -1,0 +1,37 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/saas/saas",
+    "pages/demo/demo",
+    "pages/table/table"
+  ],
+
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "我的小程序",
+    "navigationBarTextStyle":"black"
+  },
+
+  "tabBar": {
+    "color": "#274048",
+    "selectColor": "#00BD89",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/assets/img/tabbar/home.png",
+        "selectedIconPath": "/assets/img/tabbar/home-active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "个人中心",
+        "iconPath": "/assets/img/tabbar/mine.png",
+        "selectedIconPath": "/assets/img/tabbar/mine-active.png"
+      }
+    ]
+  },
+
+  "sitemapLocation": "sitemap.json"
+}
